@@ -1,9 +1,13 @@
 from flask import Flask, request, jsonify, render_template
 from google import genai
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 app = Flask(__name__)
 
-client = genai.Client(api_key='AIzaSyCdVgqT_So1y3t7IEkU0lIForjO8MBPlMY')
+client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
 
 
 @app.route('/')
