@@ -168,9 +168,13 @@ body {
   background: rgba(255, 255, 255, 0.05);
   border: 0.5px solid rgba(255, 255, 255, 0.08);
   border-radius: 4px 16px 16px 16px;
+  overflow-x: auto;
+  word-wrap: break-word;
 }
 
-.ai-bubble h1, .ai-bubble h2, .ai-bubble h3 {
+.ai-bubble h1,
+.ai-bubble h2,
+.ai-bubble h3 {
   color: #c084fc;
   margin: 12px 0 6px 0;
   font-size: 15px;
@@ -180,7 +184,8 @@ body {
   margin-bottom: 10px;
 }
 
-.ai-bubble ul, .ai-bubble ol {
+.ai-bubble ul,
+.ai-bubble ol {
   padding-left: 20px;
   margin-bottom: 10px;
 }
@@ -203,7 +208,7 @@ body {
 
 .ai-bubble hr {
   border: none;
-  border-top: 0.5px solid rgba(255,255,255,0.1);
+  border-top: 0.5px solid rgba(255, 255, 255, 0.1);
   margin: 10px 0;
 }
 
@@ -314,5 +319,64 @@ body {
   }
   30% {
     transform: translateY(-6px);
+  }
+}
+
+
+@media (max-width: 768px) {
+  body {
+    justify-content: flex-start;
+    padding: 10px 0;
+  }
+
+  .cb-wrap {
+    width: 95%;
+    height: 95vh;
+    border-radius: 16px;
+  }
+
+  .cb-header {
+    padding: 12px 16px;
+  }
+
+  .cb-title {
+    font-size: 14px;
+  }
+
+  .cb-messages {
+    padding: 14px 16px;
+    gap: 12px;
+  }
+
+  .msg-bubble {
+    font-size: 13px;
+    padding: 10px 14px;
+    max-width: 85%;
+  }
+
+  .cb-footer {
+    padding: 10px 14px;
+  }
+
+  .cb-input-wrap {
+    padding: 8px 12px;
+    border-radius: 12px;
+  }
+
+  .cb-input {
+    font-size: 16px;
+  }
+
+  .cb-send {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cb-wrap {
+    width: 85%;
   }
 }
