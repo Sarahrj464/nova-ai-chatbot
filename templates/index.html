@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nova AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="icon" type="image/png" href="/static/nova.png">
+  </head>
+  <body>
+    <div class="cb-wrap">
+      <div class="orb orb1"></div>
+      <div class="orb orb2"></div>
+      <div class="orb orb3"></div>
+
+      <div class="cb-header">
+        <div class="cb-logo">✦</div>
+        <span class="cb-title">Nova AI</span>
+        <div class="cb-status">
+          <div class="cb-dot"></div> Online
+        </div>
+      </div>
+
+      <div class="cb-messages" id="chatMessages"></div>
+
+      <div class="cb-footer">
+        <div class="cb-input-wrap">
+          <input type="text" id="userinput" class="cb-input" placeholder="Ask me anything...">
+          <button id="btn" class="cb-send">➤</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
